@@ -4,6 +4,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float force;
+    [SerializeField] private AudioClip playerWingSound;
+    [SerializeField] private AudioClip playerDeadSound;
+    
 
     private bool isOut;
     private Rigidbody2D rb;
@@ -25,6 +28,7 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             rb.velocity = new Vector2(rb.velocity.x, force );
+            SoundManager.instance.PlaySound(playerWingSound);
 
         }
     }
@@ -36,6 +40,7 @@ public class Player : MonoBehaviour
             GameManager.instance.SetDedValue(true);
             rb.velocity = Vector2.zero;
             rb.bodyType = RigidbodyType2D.Kinematic;
+            SoundManager.instance.PlaySound(playerDeadSound);
         }
     }
 
