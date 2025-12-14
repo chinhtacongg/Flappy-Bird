@@ -24,7 +24,7 @@ GitHub: https://github.com/chinhtacongg/Flappy-Bird
 
 ## Những gì học được
 - Cách cấu trúc code gameplay cho các dự án quy mô nhỏ
-- Sử dụng ScriptableObjects để tách dữ liệu trò chơi khỏi logic
+- Sử dụng Singleton để xử lý logic nhanh gọn
 - Lặp lại gameplay dựa trên thử nghiệm và sửa đổi
 
 ## Ghi chú
