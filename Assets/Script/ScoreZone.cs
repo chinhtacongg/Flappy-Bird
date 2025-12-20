@@ -17,7 +17,7 @@ public class ScoreZone : MonoBehaviour
         }
     }
 
-    private void OnEnable()
+    private void OnEnable() // function se duoc goi moi khi obj duoc setActive
     {
         hasScore = false; // reset moi lan duoc reuse nho pooling
     }
